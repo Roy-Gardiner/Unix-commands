@@ -1,0 +1,41 @@
+The basic commands exercise was this:
+
+show the name of your home directory
+create a directory
+create an empty file
+print working directory
+change into a directory
+change into the current directory (pointless in real life, only as an exercise)
+change into a directory one level above
+create a hierarchy of directories (e.g. /tmp/all/my/folders) in one command
+list a directory in a short format
+list a directory in a long format
+remove a directory
+remove a non-empty directory
+copy a file
+move a file
+show first 5 lines of a file ("head")
+show last 5 lines of a file ("tail")
+stream the entire file on the screen
+given a text file, print only the lines containing the letter 'a'
+list the current directory, showing only the files that have a particular extension (e.g. txt) using wildcards
+count the number of lines in a text file
+count the number of words in a file
+use redirection to list files, then select only the ones with a specific extension, then count their number
+find all files in your home directory that start with letter "b"
+show the manual entry page for a given command
+show the list of environment variables
+create a new environment variable
+check that a given environment variable exists
+create a new env variable, open and new terminal value and check whether it exists
+modify your ~/.bash_profile file to permanently set an env variable and check that it works in a new terminal
+show the permissions for a file
+remove the execute permission for the user and for the group
+add the write permission for the "other"
+create a directory and remove the permission that allows you to change into it
+use the 'echo' command to print "hello, world!" on the screen
+create a file hello.rb and add the line "puts 'hello, world!'" into it using command line only. Run it by passing its name as an argument to ruby.
+create a file hello.rb and make sure you can execute it by running it directly (hint: you'll need a ruby shebang + specific permissions.
+list all processes on the system ("ps" command with some extra flags), find out how many processes of Google Chrome are running using grep and wc. 
+
+
