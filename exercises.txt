@@ -38,4 +38,161 @@ create a file hello.rb and add the line "puts 'hello, world!'" into it using com
 create a file hello.rb and make sure you can execute it by running it directly (hint: you'll need a ruby shebang + specific permissions.
 list all processes on the system ("ps" command with some extra flags), find out how many processes of Google Chrome are running using grep and wc. 
 
+============================================
 
+show the name of your home directory				
+
+		echo $HOME
+
+create a directory
+
+		mkdir exercises
+
+create an empty file
+
+		touch newfile
+
+print working directory
+
+		pwd
+
+change into a directory
+
+		cd exercises
+
+change into the current directory (pointless in real life, only as an exercise)
+
+		cd .
+
+change into a directory one level above
+
+		cd ..
+
+create a hierarchy of directories (e.g. /tmp/all/my/folders) in one command
+
+		mkdir -p lev1/lev2
+
+list a directory in a short format
+
+		ls
+
+list a directory in a long format
+
+		ls -l
+
+remove a directory
+
+		rmdir dirname
+
+remove a non-empty directory
+
+		rm -r dirname
+
+copy a file
+
+		cp newfile newfile2
+		cp newfile ./dir2/newfile       directory at same level
+
+move a file
+
+		mv newfile newfile2             will overwrite
+
+show first 5 lines of a file ("head")
+show last 5 lines of a file ("tail")
+
+		head -5 newfile2
+		tail -5 newfile2
+
+stream the entire file on the screen
+
+		cat newfile2
+
+given a text file, print only the lines containing the letter 'a'
+
+		grep "T" newfile2
+
+list the current directory, showing only the files that have a particular extension (e.g. txt) using wildcards
+
+		ls *.txt        for example
+
+count the number of lines in a text file
+count the number of words in a file
+		
+		wc -l newfile2
+		wc -c newfile2
+
+use redirection to list files, then select only the ones with a specific extension, then count their number
+
+		ls *.txt | wc -l
+
+find all files in your home directory that start with letter "b"
+
+		ls b*
+
+show the manual entry page for a given command
+
+		man
+
+show the list of environment variables
+
+		env
+
+create a new environment variable
+
+
+
+check that a given environment variable exists
+
+		echo $HOME
+
+create a new env variable, open and new terminal value and check whether it exists
+
+		export HENRY=hellomum		exists in this session only, not in other command screens
+
+modify your ~/.bash_profile file to permanently set an env variable and check that it works in a new terminal
+
+		cd ~
+		subl .bash_profile
+
+		[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+		[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+		export BIKE=gangl
+		export EDITOR='subl -w'
+		export PATH=$PATH:~/bin/
+
+		Note the BIKE variable and the setting of the EDITOR variable to invoke sublime from the command line.
+
+show the permissions for a file
+remove the execute permission for the user and for the group
+add the write permission for the "other"
+create a directory and remove the permission that allows you to change into it
+
+		ls -l newfile2
+		chmod u=-x,g=-x newfile2
+		chmod o=w newfile2
+
+use the 'echo' command to print "hello, world!" on the screen
+
+		echo "hello world"
+
+create a file hello.rb and add the line "puts 'hello, world!'" into it using command line only. Run it by passing its name as an argument to ruby.
+
+		touch hello.rb
+		cat > hello.rb
+		puts "Hello,world"
+		ctrl-C
+		ruby
+		ruby hello.rb
+
+
+create a file hello.rb and make sure you can execute it by running it directly (hint: you'll need a ruby shebang + specific permissions.
+
+		which ruby               returns /Users/roygardiner/.rvm/rubies/ruby-2.0.0-p353/bin/ruby
+								put  #!  + that in the .rb
+
+		chmod u=+wrx hello.rb								
+
+list all processes on the system ("ps" command with some extra flags), find out how many processes of Google Chrome are running using grep and wc. 
+
+		ps -A
+		ps -A | grep "Chrome" | wc -l
